@@ -672,8 +672,8 @@
             <!-- gallery-area-end -->
             <div class="gallery__item">
                 <div class="gallery__thumb" style="text-align: center;">
-                    <video autoplay loop playsinline>
-                        <source src="video.MP4">
+                    <video autoplay playsinline loop id="video2" onclick="this.play()">
+                        <source src="video.MP4" type="video/mp4">
                     </video>
                 </div>
 
@@ -729,6 +729,9 @@
     </audio>
     <script>
         document.getElementById("audio").play();
+        document.getElementById("video2").play();
+
+
         if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
             // The video element will autoplay with audio.
         } else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
