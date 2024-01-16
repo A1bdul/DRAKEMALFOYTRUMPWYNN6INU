@@ -647,7 +647,14 @@
                 </div>
             </section>
             <!-- gallery-area-end -->
+            <div class="gallery__item">
+                <div class="gallery__thumb">
+                    <video autoplay loop playsinline>
+                        <source src="video.MP4">
+                    </video>
+                </div>
 
+            </div>
         </div>
         <!-- area-background-end -->
 
@@ -666,14 +673,11 @@
                                 <a href="index.html"><img src=""></a>
                             </div>
                             <div class="footer-text">
-                                <p class="desc">Lorem ipsum dolor sitamet consectur adipiscing Duis esollici tudin augue
-                                    euismod. Nulla ullam dolor sitamet consectetur</p>
+
                                 <p class="social-title">Active <span>With Us <i
                                             class="fas fa-angle-double-right"></i></span></p>
                                 <div class="footer-social">
-                                    <a href="#"><img src="assets/img/icons/social_icon01.png" alt="iocn"></a>
                                     <a href="#"><img src="assets/img/icons/social_icon02.png" alt="iocn"></a>
-                                    <a href="#"><img src="assets/img/icons/social_icon03.png" alt="iocn"></a>
                                     <a href="#"><img src="assets/img/icons/social_icon04.png" alt="iocn"></a>
                                 </div>
                             </div>
@@ -697,9 +701,21 @@
         </div>
     </footer>
     <!-- footer-start-end -->
-
-
-
+    <audio id="audio" autoplay>
+        <source src="audio.mp3" />
+    </audio>
+    <script>
+        document.getElementById("audio").play();
+        if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
+            // The video element will autoplay with audio.
+        } else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
+            // Mute audio on video
+            video.muted = true;
+        } else if (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
+            // Set a default placeholder image.
+            video.poster = "http://example.com/poster_image_url";
+        }
+    </script>
     <!-- JS here -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets/js/plugins.js"></script>
