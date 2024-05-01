@@ -39,7 +39,7 @@
      --tg-common-color-black-9: #111922;
      --tg-body-color: #adb0bc;
      --tg-heading-color: #fff;
-     --tg-theme-primary: #A020F0;
+     --tg-theme-primary: #e4181c;
      --tg-theme-secondary: #ffbe18;
      --tg-border-1: #19222b;
      --tg-border-2: #22292f;
@@ -61,6 +61,7 @@
      color: var(--tg-body-color);
      line-height: var(--tg-body-line-height);
      background: var(--tg-common-color-black);
+     overflow-x: hidden;
  }
 
  img,
